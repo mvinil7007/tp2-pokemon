@@ -1,0 +1,31 @@
+tp02/
+├── Makefile
+├── pokemons.txt
+├── lib/                     (bibliotecas fornecidas: raylib, interface, etc.)
+└── src/                     (onde ficará todo o seu código)
+    ├── main.cpp
+    ├── Pendencia.hpp
+    ├── Batalha/
+    │   ├── Batalha.hpp
+    │   └── Batalha.cpp
+    ├── Treinador/
+    │   ├── Treinador.hpp
+    │   └── Treinador.cpp
+    ├── Pokemon/
+    │   ├── Pokemon.hpp
+    │   ├── Pokemon.cpp
+    │   ├── PokemonFogo.hpp / PokemonFogo.cpp
+    │   ├── PokemonAgua.hpp / PokemonAgua.cpp
+    │   ├── PokemonPlanta.hpp / PokemonPlanta.cpp
+    │   └── PokemonEletrico.hpp / PokemonEletrico.cpp
+    ├── Golpe/
+    │   ├── Golpe.hpp
+    │   ├── Golpe.cpp
+    │   ├── GolpeDano.hpp / GolpeDano.cpp
+    │   ├── GolpeCura.hpp / GolpeCura.cpp
+    │   └── GolpeReducaoAtaque.hpp / GolpeReducaoAtaque.cpp
+    └── Item/
+        ├── Item.hpp
+        ├── Item.cpp
+        ├── Cura.hpp / Cura.cpp
+        └── Fortificante.hpp / Fortificante.cpp
