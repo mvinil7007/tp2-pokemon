@@ -2,7 +2,7 @@
 #include "Pokemon.hpp"
 
 GolpeCura::GolpeCura(std::string nome, int poder, int quantidade) 
-    : Golpe(nome), poder(poder), quantidade(quantidade) {
+    : Golpe(nome, poder), poder(poder), quantidade(quantidade) {
 
 }
 

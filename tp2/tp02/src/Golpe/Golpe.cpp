@@ -4,7 +4,7 @@
 #include <cmath>
 
 
-Golpe::Golpe(std::string nome) : nome(nome) {
+Golpe::Golpe(std::string nome, int poder) : nome(nome), poder(poder) {
 
 }
 
@@ -14,6 +14,10 @@ Golpe::~Golpe() {
 
 std::string Golpe::getNome() {
     return nome;
+}
+
+int Golpe::getPoder() {
+    return poder;
 }
 
 // Calcula o dano final considerando ataque, defesa, reducoes, tipo e fortificante

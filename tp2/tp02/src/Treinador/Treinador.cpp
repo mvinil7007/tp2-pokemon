@@ -59,7 +59,8 @@ std::string Treinador::getNome() {
     return nome;
 }
 
-Pokemon* Treinador::getPokemonAtivo() {
+Pokemon* Treinador::getAtivo() {
+    if (pokemonAtivoIndex < 0 || pokemonAtivoIndex >= 3) return nullptr;
     return equipe[pokemonAtivoIndex];
 }
 
@@ -68,12 +69,17 @@ Pokemon* Treinador::getPokemon(int indice) {
     return equipe[indice];
 }
 
-int Treinador::getPokemonAtivoIndex() {
+int Treinador::getIndiceAtivo() {
     return pokemonAtivoIndex;
 }
 
+Item* Treinador::getItem(int indice) {
+    if (indice < 0 || indice >= 2) return nullptr;
+    return itens[indice];
+}
+
 // Alterna o Pokémon ativo caso o índice seja válido e o Pokémon não esteja derrotado
-bool Treinador::trocarPokemon(int indice) {
+bool Treinador::trocar(int indice) {
     if (indice < 0 || indice >= 3) return false;
     if (equipe[indice] == nullptr || equipe[indice]->derrotado() || indice == pokemonAtivoIndex) {
         return false;
@@ -97,7 +103,7 @@ bool Treinador::usarItem(int indiceItem, Pokemon& alvo) {
 }
 
 // Verifica se todos os Pokémons da equipa foram derrotados
-bool Treinador::todosDesmaiados() {
+bool Treinador::perdeu() {
     for (int i = 0; i < 3; i++) {
         if (equipe[i] != nullptr && !equipe[i]->derrotado()) {
             return false;

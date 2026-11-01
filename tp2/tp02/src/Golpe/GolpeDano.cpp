@@ -2,7 +2,7 @@
 #include "Pokemon.hpp"
 
 
-GolpeDano::GolpeDano(std::string nome, int poder) : Golpe(nome), poder(poder) {
+GolpeDano::GolpeDano(std::string nome, int poder) : Golpe(nome, poder), poder(poder) {
     
 }
 
