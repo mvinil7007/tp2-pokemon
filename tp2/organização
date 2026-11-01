@@ -5,9 +5,6 @@ tp02/
 └── src/                     (onde ficará todo o seu código)
     ├── main.cpp
     ├── Pendencia.hpp
-    ├── Batalha/
-    │   ├── Batalha.hpp
-    │   └── Batalha.cpp
     ├── Treinador/
     │   ├── Treinador.hpp
     │   └── Treinador.cpp
