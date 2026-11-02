@@ -4,30 +4,31 @@
 #include "GolpeCura.hpp"
 #include <algorithm>
 #include <cmath>
+#include <cctype>
 
 PokemonFogo::PokemonFogo(std::string nome, int idPokemon, int vida, int ataque, int defesa)
     : Pokemon(nome, idPokemon, vida, ataque, defesa, "fogo") {
     
-    if (nome == "Charmander" || idPokemon == 4) {
-        definirGolpe(0, new GolpeDano("Lança-Chamas", 12));
-        definirGolpe(1, new GolpeReducaoAtaque("Brasas", 6));
-    } 
-    else if (nome == "Vulpix" || idPokemon == 37) {
+    // Converte o nome para minúsculas para garantir a correspondência
+    std::string n = nome;
+    for (char &c : n) c = std::tolower(c);
+
+    if (n.find("vulpix") != std::string::npos || idPokemon == 37) {
         definirGolpe(0, new GolpeDano("Giro de Fogo", 10));
         definirGolpe(1, new GolpeReducaoAtaque("Fogo Fátuo", 7));
     } 
-    else if (nome == "Ponyta" || idPokemon == 77) {
+    else if (n.find("ponyta") != std::string::npos || idPokemon == 77) {
         definirGolpe(0, new GolpeDano("Roda de Fogo", 13));
         definirGolpe(1, new GolpeDano("Chama Rápida", 8));
     } 
-    else if (nome == "Growlithe" || nome == "growlithe" || idPokemon == 58) {
+    else if (n.find("growlithe") != std::string::npos || idPokemon == 58) {
         definirGolpe(0, new GolpeDano("Explosão de Chamas", 11));
         definirGolpe(1, new GolpeReducaoAtaque("Mordida de Fogo", 7));
     }
     else {
-        // Golpe padrão para outros Pokémons do tipo Fogo
-        definirGolpe(0, new GolpeDano("Bola de Fogo", 10));
-        definirGolpe(1, new GolpeReducaoAtaque("Fumaça", 5));
+        // Charmander e padrão para Pokémons do tipo Fogo
+        definirGolpe(0, new GolpeDano("Lança-Chamas", 12));
+        definirGolpe(1, new GolpeReducaoAtaque("Brasas", 6));
     }
 }
 
