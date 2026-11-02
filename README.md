@@ -93,5 +93,5 @@ make clean
 Estrutura de classes e relacionamentos do sistema (Pokémons, Golpes, Itens e Treinadores):
 
 <p align="center">
-  <img src="lib/assets/diagrama_classes.png" alt="Diagrama de Classes UML" width="800"/>
+  <img src="tp2/tp02/lib/assets/diagrama_classes.png" alt="Diagrama de Classes UML" width="800"/>
 </p>
