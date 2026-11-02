@@ -95,3 +95,11 @@ Estrutura de classes e relacionamentos do sistema (Pokémons, Golpes, Itens e Tr
 <p align="center">
   <img src="tp2/tp02/lib/assets/diagrama_classes.png" alt="Diagrama de Classes UML" width="800"/>
 </p>
+
+## 👨‍💻 Autor
+
+- **Nome: Marcos Vinicius da Luz **
+
+- **Curso: Ciência da Computação - UFV **
+
+- **Disciplina: INF 112 - Programação Orientada a Objetos **
