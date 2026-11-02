@@ -87,3 +87,11 @@ make clean
 - **Tecla M: Ligar / Desligar música do jogo.**
 
 - **Botão SAIR / X da Janela: Encerrar o jogo com segurança.**
+
+## 📐 Diagrama de Classes (UML)
+
+Estrutura de classes e relacionamentos do sistema (Pokémons, Golpes, Itens e Treinadores):
+
+<p align="center">
+  <img src="lib/assets/diagrama_classes.png" alt="Diagrama de Classes UML" width="800"/>
+</p>
