@@ -26,7 +26,7 @@ tp02/
 ├── Makefile
 ├── pokemons.txt
 ├── lib/                     (bibliotecas fornecidas: raylib, interface, etc.)
-└── src/                     (onde ficará todo o seu código)
+└── src/                     (onde ficará todo o código de implementação do trabalho prático)
     ├── main.cpp
     ├── Pendencia.hpp
     ├── Batalha/
