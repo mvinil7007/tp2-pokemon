@@ -1,4 +1,5 @@
 #include "Treinador.hpp"
+#include "Pokemon.hpp"
 #include "PokemonFogo.hpp"
 #include "PokemonAgua.hpp"
 #include "PokemonPlanta.hpp"
@@ -55,32 +56,36 @@ Treinador::~Treinador() {
     }
 }
 
-std::string Treinador::getNome() {
+std::string Treinador::getNome() const {
     return nome;
 }
 
-Pokemon* Treinador::getAtivo() {
-    if (pokemonAtivoIndex < 0 || pokemonAtivoIndex >= 3) return nullptr;
+Pokemon* Treinador::getAtivo() const {
+    if (pokemonAtivoIndex < 0 || pokemonAtivoIndex >= 3) 
+        return nullptr;
     return equipe[pokemonAtivoIndex];
 }
 
-Pokemon* Treinador::getPokemon(int indice) {
-    if (indice < 0 || indice >= 3) return nullptr;
+Pokemon* Treinador::getPokemon(int indice) const {
+    if (indice < 0 || indice >= 3) 
+        return nullptr;
     return equipe[indice];
 }
 
-int Treinador::getIndiceAtivo() {
+int Treinador::getIndiceAtivo() const {
     return pokemonAtivoIndex;
 }
 
-Item* Treinador::getItem(int indice) {
-    if (indice < 0 || indice >= 2) return nullptr;
+Item* Treinador::getItem(int indice) const {
+    if (indice < 0 || indice >= 2)
+        return nullptr;
     return itens[indice];
 }
 
 // Alterna o Pokémon ativo caso o índice seja válido e o Pokémon não esteja derrotado
 bool Treinador::trocar(int indice) {
-    if (indice < 0 || indice >= 3) return false;
+    if (indice < 0 || indice >= 3) 
+        return false;
     if (equipe[indice] == nullptr || equipe[indice]->derrotado() || indice == pokemonAtivoIndex) {
         return false;
     }
@@ -89,6 +94,16 @@ bool Treinador::trocar(int indice) {
 }
 
 // Aplica um item ao Pokémon e remove-o da mochila se for consumido com sucesso
+bool Treinador::usarItem(int indiceItem, int indiceAlvo) {
+    if (indiceItem < 0 || indiceItem >= 2 || itens[indiceItem] == nullptr) {
+        return false;
+    }
+    Pokemon* alvo = getPokemon(indiceAlvo);
+    if (alvo == nullptr) 
+        return false;
+    return usarItem(indiceItem, *alvo);
+}
+
 bool Treinador::usarItem(int indiceItem, Pokemon& alvo) {
     if (indiceItem < 0 || indiceItem >= 2 || itens[indiceItem] == nullptr) {
         return false;
@@ -103,7 +118,7 @@ bool Treinador::usarItem(int indiceItem, Pokemon& alvo) {
 }
 
 // Verifica se todos os Pokémons da equipa foram derrotados
-bool Treinador::perdeu() {
+bool Treinador::perdeu() const {
     for (int i = 0; i < 3; i++) {
         if (equipe[i] != nullptr && !equipe[i]->derrotado()) {
             return false;

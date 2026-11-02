@@ -18,16 +18,17 @@ public:
     Treinador(std::string nome, int pokemons[3]);
     ~Treinador();
 
-    std::string getNome();
-    Pokemon* getAtivo();
-    Pokemon* getPokemon(int indice);
-    int getIndiceAtivo();
-    Item* getItem(int indice);
+    std::string getNome() const;
+    Pokemon* getAtivo() const;
+    Pokemon* getPokemon(int indice) const;
+    int getIndiceAtivo() const;
+    Item* getItem(int indice) const;
 
     // Ações de batalha
     bool trocar(int indice);
+    bool usarItem(int indiceItem, int indiceAlvo);
     bool usarItem(int indiceItem, Pokemon& alvo);
-    bool perdeu();
+    bool perdeu() const;
 };
 
 #endif

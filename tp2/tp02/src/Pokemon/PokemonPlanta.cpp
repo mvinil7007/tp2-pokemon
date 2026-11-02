@@ -1,13 +1,16 @@
-#ifndef POKEMONPLANTA_HPP
-#define POKEMONPLANTA_HPP
+#include "PokemonPlanta.hpp"
+#include <algorithm>
+#include <cmath>
 
-#include "Pokemon.hpp"
+PokemonPlanta::PokemonPlanta(std::string nome, int idPokemon, int vida, int ataque, int defesa)
+    : Pokemon(nome, idPokemon, vida, ataque, defesa, "planta") {}
 
-// Subclasse de Pokemon do tipo Planta
-class PokemonPlanta : public Pokemon {
-public:
-    PokemonPlanta(std::string nome, int idPokemon, int vida, int ataque, int defesa);
-    int calcularDanoRecebido(int dano, std::string tipoAtacante) override;
-};
-
-#endif
+int PokemonPlanta::calcularDanoRecebido(int dano, std::string tipoAtacante) {
+    double multiplicador = 1.0;
+    if (tipoAtacante == "fogo") {
+        multiplicador = 1.25;
+    } else if (tipoAtacante == "agua") {
+        multiplicador = 0.75;
+    }
+    return static_cast<int>(std::round(dano * multiplicador));
+}
