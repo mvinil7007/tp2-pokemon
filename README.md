@@ -73,8 +73,17 @@ make run
 ```bash
 make
 ```
-Limpar Arquivos Gerados (.o e executável):
+- **Limpar Arquivos Gerados (`.o` e executável):**
 
 ```bash
 make clean
 ```
+
+##🕹️ Comandos e Controles
+- **Mouse / Setas: Navegação pelos menus e seleção de ações.**
+
+- **Clique / Enter: Confirmar escolha de ataque, item ou troca.**
+
+- **Tecla M: Ligar / Desligar música do jogo.**
+
+- **Botão SAIR / X da Janela: Encerrar o jogo com segurança.**
