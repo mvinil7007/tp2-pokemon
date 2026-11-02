@@ -1,7 +1,7 @@
 # TP2 - Simulador de Batalhas Pokémon (INF 112)
 
 <p align="center">
-  <img src="lib/assets/banner.png" alt="Iniciais Pokémon em Pixel Art" width="500"/>
+  <img src="tp2/tp02/lib/assets/pikomon.png" alt="Iniciais Pokémon em Pixel Art" width="500"/>
 </p>
 
 Trabalho Prático desenvolvido para a disciplina de **Programação Orientada a Objetos (INF 112)** na Universidade Federal de Viçosa (UFV).
