@@ -53,40 +53,25 @@ tp02/
         ├── Item.cpp
         ├── Cura.hpp / Cura.cpp
         └── Fortificante.hpp / Fortificante.cpp
+```
 
-🚀 Como Compilar e Executar
-Certifique-se de estar dentro do diretório tp02/:
+## 🚀 Como Compilar e Executar
 
-Bash
+Certifique-se de estar dentro do diretório `tp02/`:
+
+```bash
 cd tp02
 
 Compilar e Executar:
 
 Bash
 make run
+
 Apenas Compilar:
 
 Bash
 make
-Limpar Ficheiros Gerados (.o e executável):
+Limpar Arquivos Gerados (.o e executável):
 
 Bash
 make clean
-
-🕹️ Comandos e Controles
-Mouse / Setas: Navegação pelos menus e seleção de ações.
-
-Clique / Enter: Confirmar escolha de ataque, item ou troca.
-
-Tecla M: Ligar / Desligar música do jogo.
-
-Botão SAIR / X da Janela: Encerrar o jogo com segurança.
-
-👨‍💻 Autor
-Nome: Marcos Vinicius da Luz
-
-Curso: Ciência da Computação / Engenharia de Software
-
-Instituição: Universidade Federal de Viçosa (UFV)
-
-Disciplina: INF 112 - Programação Orientada a Objetos
