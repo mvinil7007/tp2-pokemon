@@ -9,21 +9,21 @@ PokemonPlanta::PokemonPlanta(std::string nome, int idPokemon, int vida, int ataq
     : Pokemon(nome, idPokemon, vida, ataque, defesa, "planta") {
     
     if (nome == "Bulbasaur" || idPokemon == 1) {
-        definirGolpe(0, new GolpeDano("Chicote de Cipo", 10));
+        definirGolpe(0, new GolpeDano("Chicote de Cipó", 10));
         definirGolpe(1, new GolpeCura("Semente de Vampiro", 4, 8));
     } 
     else if (nome == "Oddish" || idPokemon == 43) {
         definirGolpe(0, new GolpeDano("Folha Navalha", 11));
-        definirGolpe(1, new GolpeCura("Absorcao", 5, 10));
+        definirGolpe(1, new GolpeCura("Absorção", 5, 10));
     } 
     else if (nome == "Bellsprout" || idPokemon == 69) {
-        definirGolpe(0, new GolpeDano("Danca de Folhas", 12));
-        definirGolpe(1, new GolpeReducaoAtaque("Po de Sono", 5));
+        definirGolpe(0, new GolpeDano("Dança de Folhas", 12));
+        definirGolpe(1, new GolpeReducaoAtaque("Pó de Sono", 5));
     } 
     else {
-        // Golpe padrao para outros Pokemons de Planta
+        // Golpe padrão para outros Pokémons do tipo Planta
         definirGolpe(0, new GolpeDano("Folha Navalha", 10));
-        definirGolpe(1, new GolpeCura("Absorcao", 5, 8));
+        definirGolpe(1, new GolpeCura("Absorção", 5, 8));
     }
 }
 

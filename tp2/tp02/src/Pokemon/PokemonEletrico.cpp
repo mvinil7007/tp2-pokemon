@@ -9,24 +9,24 @@ PokemonEletrico::PokemonEletrico(std::string nome, int idPokemon, int vida, int 
     : Pokemon(nome, idPokemon, vida, ataque, defesa, "eletrico") {
     
     if (nome == "Pikachu" || idPokemon == 25) {
-        definirGolpe(0, new GolpeDano("Choque do Trovao", 12));
+        definirGolpe(0, new GolpeDano("Choque do Trovão", 12));
         definirGolpe(1, new GolpeReducaoAtaque("Onda de Choque", 5));
     } 
     else if (nome == "Voltorb" || idPokemon == 100) {
-        definirGolpe(0, new GolpeDano("Faisca", 10));
+        definirGolpe(0, new GolpeDano("Faísca", 10));
         definirGolpe(1, new GolpeReducaoAtaque("Carga", 8));
     } 
     else if (nome == "Magnemite" || idPokemon == 81) {
-        definirGolpe(0, new GolpeDano("Raio Trovao", 11));
-        definirGolpe(1, new GolpeDano("Canhao Eletronico", 9));
+        definirGolpe(0, new GolpeDano("Raio Trovão", 11));
+        definirGolpe(1, new GolpeDano("Canhão Eletrônico", 9));
     } 
     else if (nome == "Electabuzz" || idPokemon == 125) {
-        definirGolpe(0, new GolpeDano("Soco do Trovao", 14));
-        definirGolpe(1, new GolpeReducaoAtaque("Descarga Eletronica", 6));
+        definirGolpe(0, new GolpeDano("Soco do Trovão", 14));
+        definirGolpe(1, new GolpeReducaoAtaque("Descarga Elétrica", 6));
     } 
     else {
-        // Golpe padrao para outros Pokemons Eletricos
-        definirGolpe(0, new GolpeDano("Trovao", 11));
+        // Golpe padrão para outros Pokémons do tipo Elétrico
+        definirGolpe(0, new GolpeDano("Trovão", 11));
         definirGolpe(1, new GolpeReducaoAtaque("Choque", 5));
     }
 }
