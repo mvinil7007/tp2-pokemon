@@ -79,7 +79,7 @@ make
 make clean
 ```
 
-##🕹️ Comandos e Controles
+## 🕹️ Comandos e Controles
 - **Mouse / Setas: Navegação pelos menus e seleção de ações.**
 
 - **Clique / Enter: Confirmar escolha de ataque, item ou troca.**
