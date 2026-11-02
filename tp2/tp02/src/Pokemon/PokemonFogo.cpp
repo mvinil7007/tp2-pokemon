@@ -1,6 +1,7 @@
 #include "PokemonFogo.hpp"
 #include "GolpeDano.hpp"
 #include "GolpeReducaoAtaque.hpp"
+#include "GolpeCura.hpp"
 #include <algorithm>
 #include <cmath>
 
@@ -15,10 +16,14 @@ PokemonFogo::PokemonFogo(std::string nome, int idPokemon, int vida, int ataque, 
         definirGolpe(0, new GolpeDano("Giro de Fogo", 10));
         definirGolpe(1, new GolpeReducaoAtaque("Fogo Fatuo", 7));
     } 
+    else if (nome == "Ponyta" || idPokemon == 77) {
+        definirGolpe(0, new GolpeDano("Roda de Fogo", 13));
+        definirGolpe(1, new GolpeDano("Chama Rapida", 8));
+    } 
     else {
-        // Golpes padrao para outros Pokemons do tipo Fogo
-        definirGolpe(0, new GolpeDano("Lanca-Chamas", 12));
-        definirGolpe(1, new GolpeReducaoAtaque("Brasas", 6));
+        // Golpe padrao para outros Pokemons de Fogo
+        definirGolpe(0, new GolpeDano("Chama Basica", 10));
+        definirGolpe(1, new GolpeReducaoAtaque("Fumaca", 5));
     }
 }
 

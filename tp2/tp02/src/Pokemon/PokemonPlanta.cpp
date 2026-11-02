@@ -17,11 +17,11 @@ PokemonPlanta::PokemonPlanta(std::string nome, int idPokemon, int vida, int ataq
         definirGolpe(1, new GolpeCura("Absorcao", 5, 10));
     } 
     else if (nome == "Bellsprout" || idPokemon == 69) {
-        definirGolpe(0, new GolpeDano("Chicote de Cipo", 12));
+        definirGolpe(0, new GolpeDano("Danca de Folhas", 12));
         definirGolpe(1, new GolpeReducaoAtaque("Po de Sono", 5));
     } 
     else {
-        // Golpes padrao para outros Pokemons do tipo Planta
+        // Golpe padrao para outros Pokemons de Planta
         definirGolpe(0, new GolpeDano("Folha Navalha", 10));
         definirGolpe(1, new GolpeCura("Absorcao", 5, 8));
     }
