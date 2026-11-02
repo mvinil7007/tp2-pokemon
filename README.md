@@ -61,17 +61,20 @@ Certifique-se de estar dentro do diretório `tp02/`:
 
 ```bash
 cd tp02
+```
 
-Compilar e Executar:
+- **Compilar e Executar:**
 
-Bash
+```bash
 make run
+```
+- **Apenas Compilar:**
 
-Apenas Compilar:
-
-Bash
+```bash
 make
+```
 Limpar Arquivos Gerados (.o e executável):
 
-Bash
+```bash
 make clean
+```
