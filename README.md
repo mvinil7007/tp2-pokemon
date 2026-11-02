@@ -98,8 +98,8 @@ Estrutura de classes e relacionamentos do sistema (Pokémons, Golpes, Itens e Tr
 
 ## 👨‍💻 Autor
 
-- **Nome: Marcos Vinicius da Luz **
+- Nome: Marcos Vinicius da Luz
 
-- **Curso: Ciência da Computação - UFV **
+- Curso: Ciência da Computação - UFV 
 
-- **Disciplina: INF 112 - Programação Orientada a Objetos **
+- Disciplina: INF 112 - Programação Orientada a Objetos 
