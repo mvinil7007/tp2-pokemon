@@ -5,6 +5,7 @@
 #include "Pokemon.hpp"
 #include "Item.hpp"
 
+// classe responsável pela gestão da equipe, inventário de itens e ações do combate
 
 class Treinador {
 private:

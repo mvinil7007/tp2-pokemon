@@ -3,7 +3,7 @@
 
 #include "Golpe.hpp"
 
-
+// subclasse de Golpe que aplica dano e reduz o atributo de ataque do alvo.
 class GolpeReducaoAtaque : public Golpe {
 private:
     int poder;

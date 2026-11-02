@@ -11,9 +11,11 @@
 #include <iostream>
 
 Treinador::Treinador(std::string nome, int pokemons[3]) : nome(nome), pokemonAtivoIndex(0) {
+    // Inicialização preventiva dos ponteiros da equipe para evitar acessos inválidos
     for (int indice = 0; indice < 3; indice++)
         equipe[indice] = nullptr;
 
+    // Leitura das estatísticas a partir do arquivo de configuração
     std::ifstream arquivo("../pokemons.txt");
 
     int id, vida, ataque, defesa;
@@ -22,7 +24,7 @@ Treinador::Treinador(std::string nome, int pokemons[3]) : nome(nome), pokemonAti
         for (int indice = 0; indice < 3; indice++) {
             if (pokemons[indice] != id || equipe[indice] != nullptr) 
                 continue;
-
+            // Instanciação dinâmica com base na especialização elemental
             if (tipo == "fogo") {
                 equipe[indice] = new PokemonFogo(nomePokemon, id, vida, ataque, defesa);
             } 
@@ -46,10 +48,12 @@ Treinador::Treinador(std::string nome, int pokemons[3]) : nome(nome), pokemonAti
 
 
 Treinador::~Treinador() {
+    // Liberação de memória dos Pokémons instanciados para evitar vazamentos
     for (int i = 0; i < 3; i++) {
         delete equipe[i];
         equipe[i] = nullptr;
     }
+    // Liberação de memória dos itens restantes na mochila
     for (int i = 0; i < 2; i++) {
         delete itens[i];
         itens[i] = nullptr;

@@ -67,7 +67,6 @@ int Pokemon::perderVida(int quantidade) {
     return vidaAnterior - vida;
 }
 
-// não cura Pokémon derrotado
 int Pokemon::curar(int quantidade) {
     if (quantidade <= 0 || derrotado()) 
         return 0;
@@ -82,7 +81,7 @@ void Pokemon::reduzirAtaque(int quantidade) {
         reducaoProximoAtaque = quantidade;
     }
 }
-
+// Consome e zera a redução de ataque acumulada para o próximo turno
 int Pokemon::consumirReducaoAtaque() {
     int reducao = reducaoProximoAtaque;
     reducaoProximoAtaque = 0;

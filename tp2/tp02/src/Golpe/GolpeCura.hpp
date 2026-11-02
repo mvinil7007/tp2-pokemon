@@ -3,7 +3,7 @@
 
 #include "Golpe.hpp"
 
-
+// Subclasse de Golpe que causa dano ao alvo e drena/recupera vida para o atacante.
 class GolpeCura : public Golpe {
 private:
     int poder;      

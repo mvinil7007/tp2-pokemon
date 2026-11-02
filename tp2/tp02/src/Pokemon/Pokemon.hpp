@@ -5,7 +5,7 @@
 
 // Declaração antecipada da classe Golpe
 class Golpe;
-
+// classe base abstrata que representa um Pokémon no jogo.
 class Pokemon {
 protected:
     std::string nome;
@@ -21,6 +21,7 @@ protected:
                               // [0] golpe principal , [1] secundario
 public:
     Pokemon(std::string nome, int idPokemon, int vida, int ataque, int defesa, std::string tipo);
+    // destrutor para as subclasses
     virtual ~Pokemon();
 
     

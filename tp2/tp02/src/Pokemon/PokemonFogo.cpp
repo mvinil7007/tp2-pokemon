@@ -32,6 +32,7 @@ PokemonFogo::PokemonFogo(std::string nome, int idPokemon, int vida, int ataque, 
     }
 }
 
+// Regra elemental: alta vulnerabilidade a Água (2.0x) e resistência a Planta (0.5x)
 int PokemonFogo::calcularDanoRecebido(int dano, std::string tipoAtacante) {
     double mult = 1.0;
     if (tipoAtacante == "agua") 

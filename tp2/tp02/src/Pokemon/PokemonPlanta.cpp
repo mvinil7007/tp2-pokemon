@@ -27,6 +27,7 @@ PokemonPlanta::PokemonPlanta(std::string nome, int idPokemon, int vida, int ataq
     }
 }
 
+// Regra elemental: vulnerável a Fogo (1.25x) e resistente a Água (0.75x)
 int PokemonPlanta::calcularDanoRecebido(int dano, std::string tipoAtacante) {
     double multiplicador = 1.0;
     if (tipoAtacante == "fogo") {

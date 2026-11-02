@@ -31,6 +31,7 @@ PokemonEletrico::PokemonEletrico(std::string nome, int idPokemon, int vida, int 
     }
 }
 
+// Regra elemental: resistência contra ataques do tipo Água (0.75x)
 int PokemonEletrico::calcularDanoRecebido(int dano, std::string tipoAtacante) {
     double multiplicador = 1.0;
     if (tipoAtacante == "agua") {

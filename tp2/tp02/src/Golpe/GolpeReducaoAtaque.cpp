@@ -1,7 +1,6 @@
 #include "GolpeReducaoAtaque.hpp"
 #include "Pokemon.hpp"
 
-
 GolpeReducaoAtaque::GolpeReducaoAtaque(std::string nome, int poder) 
     : Golpe(nome, poder), poder(poder) {
     

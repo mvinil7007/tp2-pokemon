@@ -7,7 +7,7 @@
 
 PokemonAgua::PokemonAgua(std::string nome, int idPokemon, int vida, int ataque, int defesa)
     : Pokemon(nome, idPokemon, vida, ataque, defesa, "agua") {
-    
+    // Alocação dinâmica de golpes específicos e polimórficos de acordo com o Pokémon instanciado
     if (nome == "Squirtle" || idPokemon == 7) {
         definirGolpe(0, new GolpeDano("Jato de Água", 11));
         definirGolpe(1, new GolpeReducaoAtaque("Bolhas", 6));
@@ -27,6 +27,7 @@ PokemonAgua::PokemonAgua(std::string nome, int idPokemon, int vida, int ataque, 
     }
 }
 
+// Regra elemental: resistente a Fogo (0.5x) e vulnerável a Elétrico (1.5x)
 int PokemonAgua::calcularDanoRecebido(int dano, std::string tipoAtacante) {
     double multiplicador = 1.0;
     if (tipoAtacante == "fogo") {

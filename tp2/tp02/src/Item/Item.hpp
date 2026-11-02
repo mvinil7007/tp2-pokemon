@@ -6,7 +6,7 @@
 // Declaração antecipada para evitar inclusão circular com Pokemon
 class Pokemon;
 
-
+// Classe base abstrata para os itens consumíveis utilizados durante a batalha.
 class Item {
 protected:
     std::string nome;

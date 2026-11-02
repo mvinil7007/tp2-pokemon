@@ -7,6 +7,7 @@ Cura::Cura() : Item("Cura") {
 }
 
 // Executa a ação de curar o Pokémon
+
 bool Cura::usar(Pokemon& alvo) {
     // Não permite curar se o Pokémon estiver desmaiado ou com vida máxima
     if (alvo.derrotado() || alvo.getVida() >= alvo.getVidaMaxima()) {

@@ -1,6 +1,7 @@
 #include "GolpeDano.hpp"
 #include "Pokemon.hpp"
 
+// subclasse de Golpe voltada exclusivamente para causação de dano direto.
 
 GolpeDano::GolpeDano(std::string nome, int poder) : Golpe(nome, poder), poder(poder) {
     
