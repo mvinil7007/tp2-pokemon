@@ -8,7 +8,7 @@ class Pokemon;
 
 // Classe base abstrata para os itens consumíveis utilizados durante a batalha.
 class Item {
-protected:
+private:
     std::string nome;
 
 public:

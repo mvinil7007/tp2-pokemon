@@ -7,7 +7,7 @@
 class Golpe;
 // classe base abstrata que representa um Pokémon no jogo.
 class Pokemon {
-protected:
+private:
     std::string nome;
     std::string tipo;
     int idPokemon;

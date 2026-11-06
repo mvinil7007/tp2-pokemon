@@ -7,10 +7,10 @@
 class Pokemon;
 // Classe base abstrata que representa um golpe no jogo.
 class Golpe {
-protected:
+private:
     std::string nome;
     int poder;
-    
+protected:
     // Metodo que calcula o dano respeitando as regras de tipo de ataque e alvo
     int calcularDano(Pokemon& atacante, Pokemon& alvo, int poder);
 
